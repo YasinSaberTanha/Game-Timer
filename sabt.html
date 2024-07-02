@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رزرو</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.rtl.min.css">
+    <script src="JQpuery/jquery-3.7.1.min.js"></script>
+    <style>
+        .d-grid button{
+            font-size: large;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 5px 1px black;
+        }
+        .d-grid button:last-child span{
+            font-size: 30px;
+            font-weight: bold;
+        }        
+        @media (min-width: 450px){
+            .container{
+                position: fixed;
+                left: 50%;
+                top: 40%;
+                transform: translate(-50%,-50%);
+                max-width: 1000px;
+            }
+            .box_submit{
+                height: 90px !important;
+                font-size: 25px !important;
+                font-weight: bold !important;
+            }
+            #in_mablag{
+                font-size: 50px !important;
+                font-weight: bold !important;
+                height: 80px !important;
+            }
+            .box_sistems , .box_daste{
+                grid-template-columns: repeat(auto-fit, minmax(150px,auto)) !important; 
+                grid-auto-rows: 80px !important; 
+            }
+            .div_namaish{
+                display: flex;
+                justify-content: space-around;
+            }
+            .div_namaish span{
+                font-size: 30px !important;
+                font-weight: bold !important;
+            }
+            .alert_add_btn{
+                width: 40% !important;
+            }
+            .alert_add_btn div p{
+                text-align: center;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-secondary-subtle">
+    <div class="container">
+
+        <div class="box_sistems d-grid p-3 bg-secondary rounded-4 shadow m-3 mt-4" style="grid-template-columns: repeat(auto-fit, minmax(70px,auto)); grid-auto-rows: 70px;">
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">1</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">2</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">3</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">4</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">5</button>
+            <button class="btn_hazf btn btn-danger m-2"><span class="mb-1" style="font-weight: bold;font-size: 30px;">-</span></button>
+            <button class="btn_azafbtn btn btn-primary m-2"><span class="mb-1">+</span></button>
+        </div>
+
+        <div class="box_daste d-grid p-3 bg-secondary rounded-4 shadow m-3 mt-4" style="grid-template-columns: repeat(auto-fit, minmax(70px,auto)); grid-auto-rows: 70px;">
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">1</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">2</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">3</button>
+            <button class="btn btn-dark focus-ring focus-ring-light m-2">4</button>
+        </div>
+
+        <div class="p-3 bg-secondary rounded-4 shadow m-3 mt-4">
+            <input type="number" placeholder="مبلغ" class="form-control text-center" id="in_mablag" style="height: 50px; font-size: large; font-weight: bold;">
+        </div>
+
+        <div class="div_namaish p-3 bg-secondary rounded-4 shadow m-3 mt-4">
+            <h3>سیستم : <span id="sistem_txt">0</span></h3>
+            <h3>دسته : <span id="dashe_txt">0</span></h3>
+            <h3>مبلغ : <span id="mablag_txt">0</span></h3>
+        </div>
+        <br>
+        <br>
+        <br>
+    </div>
+
+
+
+    
+    <div class="div_box_submit position-fixed bottom-0 w-100">
+        <div class="p-3 bg-secondary rounded-4 shadow m-3">
+            <button class="box_submit rounded-4 btn btn-danger w-100" style="font-weight: bold;">ثبت</button>
+        </div>
+    </div>
+
+
+
+    <div class="alert_add_btn position-fixed top-0 w-100 p-3" style="left: 100% !important;">
+        <div class="alert alert-warning">
+            <p class="m-0" style="font-weight: bold;">برای تغیر باید سیستم رزرو نداشته باشید</p>
+        </div>
+    </div>
+
+
+    <script src="Js/sabt.js"></script>
+</body>
+</html>

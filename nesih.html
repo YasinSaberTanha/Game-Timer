@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نسیه</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.rtl.min.css" />
+    <script src="JQpuery/jquery-3.7.1.min.js"></script>
+    <style>
+      @media (min-width: 450px){
+        .container{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px,auto));
+        }
+        .box_slider{
+          display: none;
+          position: fixed !important;
+          max-width: 500px;
+          bottom: 50% !important;
+          left: 50% !important;
+          border-radius: 20px;
+          transform: translate(-50%,-50%) !important;
+        }
+      }
+      @media (min-width: 900px){
+        .box_slider .card,.box_wiraysh .card{
+          width: 30% !important;
+          top: 30% !important;
+        }
+      }
+    </style>
+  </head> 
+
+  <body class="bg-secondary-subtle">
+
+    <div class="container">
+    </div>
+
+
+    <div class="box_siya position-fixed top-0 start-0 bg-black w-100 h-100 bg-opacity-75" style="display: none;"></div>
+    <img src="plus.svg" alt="click" style="height: 60px; width: 60px;" class=" btn_add position-fixed d-flex justify-content-center top-0 end-0 rounded m-2"  >
+      
+
+
+    <!-- باکس سازنده -->
+    <div class="box_slider bg-secondary position-fixed rounded-top-5 w-100 pt-0 p-3" style="bottom: -140px;">    
+        <button class="box_sazande btn top-0 btn-secondary rounded-top-5 w-100 p-1 m-0 position-relative" style="height: 25px;">
+          <button class="btn btn-primary position-absolute start-50 p-0 translate-middle-x m-auto" style="height: 7px; width: 15%; top: 10px;" disabled></button>
+        </button>
+        <div>
+          <input class="in_name col-12 form-control mb-2 p-1 text-center focus-ring focus-ring-dark mt-1" style="font-weight: bold;" type="text" placeholder="نام" />
+          <input class="in_peric col-12 form-control mb-2 p-1 text-center focus-ring focus-ring-dark" style="font-weight: bold;" type="number" placeholder="مبلغ" />
+          <button class="btn_submit btn btn-danger col-12" style="font-weight: bold;">ثبت</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- باکس ویرایس -->
+    <div class="box_wiraysh position-fixed top-0 start-0 bg-black w-100 h-100 bg-opacity-75" style="display: none;">
+      <div class="card position-fixed start-50 top-50 translate-middle w-75">
+        <div class="card-header text-center" style="font-weight: bold;">ویرایش</div>
+        <div class="card-body">
+          <input type="number" class="w-100 text-center mt-2 p-1 mb-2" id="W_number" placeholder="مبلغ" style="font-weight: bold;">
+          <div class="d-flex gap-2">
+            <button class="btn_wiraysh btn btn-success w-100">ویرایش</button>
+            <button class="btn_off_wiraysh btn btn-danger w-100">لغو</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- باکس حذف -->
+    <div class="box_remove position-fixed top-0 start-0 bg-black w-100 h-100 bg-opacity-75" style="display: none;">
+      <div class="card position-fixed start-50 top-50 translate-middle w-75">
+        <div class="card-header text-center" style="font-weight: bold;">حذف</div>
+        <div class="card-body">
+          <div class="d-flex gap-2">
+            <button class="box_btn_remove btn btn-success w-100">اعلان</button>
+            <button class="box_btn_off_remove btn btn-danger w-100">لغو</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="Js/nesih.js"></script>
+  </body>
+</html>

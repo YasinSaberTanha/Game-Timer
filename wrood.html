@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گیم تایم</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.rtl.min.css">
+    <script src="JQpuery/jquery-3.7.1.min.js"></script>
+    <style>
+        thead tr td{
+            margin: 2px;
+            background-color: #373b3e;
+            color: #e2e3e5;
+            font-weight: bold;
+            align-content: center;
+            border-radius: 3px;
+            box-shadow: 2px 2px 3px black;
+        }
+        table tr {   
+            display: grid;
+            grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+            grid-template-rows: 50px;
+            margin-bottom: 6px;
+        }
+        table td{
+            margin: 2px;
+            font-weight: bold;
+            align-content: center;
+            border-radius: 5px;
+        }
+        tbody td{
+            border: 4px solid #2196F3;
+            font-size: large;
+        }
+        tbody tr:hover{
+            background-color: #2196F3;
+        }
+        @media (min-width: 450px){
+            .tabel{
+                max-width: 70% !important;
+                position: fixed;
+                left: 50%;
+                top: 5%;
+                transform: translate(-50%);
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-secondary-subtle">
+
+        <table class="tabel w-100 text-center">
+            <thead>
+                <tr>
+                    <td style="border-color: red;">#</td>
+                    <td>زمان شروع</td>
+                    <td>زمان پایان</td>
+                    <td>زمان</td>
+                    <td>مبلغ</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+
+
+        <!-- باکس حذف -->
+        <div class="box_remove position-fixed top-0 start-0 bg-black w-100 h-100 bg-opacity-75" style="display: none;">
+            <div class="card position-fixed start-50 top-50 translate-middle w-75">
+              <div class="card-header text-center" style="font-weight: bold;">حذف</div>
+              <div class="card-body">
+                <div class="d-flex gap-2">
+                  <button class="box_btn_remove btn btn-success w-100">اعلان</button>
+                  <button class="box_btn_off_remove btn btn-danger w-100">لغو</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        <script src="Js/wrood.js"></script>
+</body>
+</html>
